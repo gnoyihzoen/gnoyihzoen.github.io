@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neo Zhiyong</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+
+    <!-- JS -->
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <!-- Landing Page -->
+    <section id="landing-page">
+      <nav>
+        <figure>
+          <img id="personal-logo" src="./assets/headshot_circle.png" alt="Neo Zhiyong Logo" />
+        </figure>
+        <ul class="nav__link--list">
+          <li class="nav__link"><a href="#projects" class="nav__link--anchor">Projects</a></li>
+          <li class="nav__link"><a href="#" class="nav__link--anchor" onclick="toggleModal()">About</a></li>
+          <li class="nav__link"><a href="#" class="nav__link--anchor" onclick="toggleContrast()"><i class="fa-solid fa-circle-half-stroke"></i></a></li>
+        </ul>
+      </nav>
+
+      <header class="header">
+        <div class="header__content">
+          <h1 class="title">Hi, I'm <span class="blue">Neo</span>.</h1>
+          <p class="header__para">
+            I’m a <b class="blue">software developer</b> passionate about building clean, functional, and engaging web applications.
+          </p>
+          <div class="social__list">
+            <a href="https://github.com/gnoyihzoen" target="_blank" class="social__link"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/neo-zhiyong" target="_blank" class="social__link"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </header>
+    </section>
+
+    <!-- About Modal -->
+    <div class="modal">
+      <div class="modal__content">
+        <i class="fa-solid fa-xmark modal__exit" onclick="toggleModal()"></i>
+        <h3>About Me</h3>
+        <p>
+          I’m <b class="blue">Neo Zhiyong</b>, a developer who enjoys working with modern frameworks like <b>React</b> and <b>Node.js</b>, while also exploring Python and backend systems.
+        </p>
+        <div class="skills">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Python</span><span>Node.js</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="container">
+        <h1 class="section__title">My <span class="blue">Projects</span></h1>
+        <ul class="project__list">
+
+          <!-- Example Project -->
+          <li class="project">
