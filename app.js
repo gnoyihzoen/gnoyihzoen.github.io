@@ -1,13 +1,15 @@
-function toggleModal() {
-  const modal = document.querySelector('.modal');
-  modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
-}
-
+// Dark mode toggle
 function toggleContrast() {
   document.body.classList.toggle('dark');
 }
 
-// ===== About modal controls =====
+// Dynamic year in footer
+document.addEventListener('DOMContentLoaded', () => {
+  const y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+});
+
+// ===== Accessible About modal =====
 let lastFocusedEl = null;
 
 function openAbout(e) {
@@ -19,13 +21,11 @@ function openAbout(e) {
   modal.setAttribute('aria-hidden', 'false');
   document.body.classList.add('body--locked');
 
-  // Focus first focusable element inside modal
+  // Focus first interactive element
   const focusable = modal.querySelector('button, [href], input, textarea, select, [tabindex]:not([tabindex="-1"])');
   if (focusable) focusable.focus();
 
-  // Close on ESC
   document.addEventListener('keydown', escHandler);
-  // Close on backdrop click
   modal.addEventListener('click', backdropHandler);
 }
 
@@ -38,19 +38,14 @@ function closeModal() {
   document.removeEventListener('keydown', escHandler);
   modal.removeEventListener('click', backdropHandler);
 
-  // Return focus to trigger
   if (lastFocusedEl) lastFocusedEl.focus();
 }
 
 function escHandler(e) {
-  if (e.key === 'Escape') {
-    closeModal();
-  }
+  if (e.key === 'Escape') closeModal();
 }
 
 function backdropHandler(e) {
   const modalContent = e.currentTarget.querySelector('.modal__content');
-  if (!modalContent.contains(e.target)) {
-    closeModal();
-  }
+  if (!modalContent.contains(e.target)) closeModal();
 }
