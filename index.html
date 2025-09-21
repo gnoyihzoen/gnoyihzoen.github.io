@@ -2,98 +2,98 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Neo Zhiyong</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
-
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
-
-    <!-- JS -->
     <script src="app.js" defer></script>
   </head>
   <body>
-    <!-- Landing Page -->
+    <!-- Header / Nav -->
     <section id="landing-page">
-      <nav>
-        <figure>
+      <nav class="nav">
+        <a class="brand" href="#landing-page" aria-label="Neo home">
           <img id="personal-logo" src="./assets/headshot_circle.png" alt="Neo Zhiyong Logo" />
-        </figure>
-        <ul class="nav__link--list">
-          <li class="nav__link"><a href="#projects" class="nav__link--anchor">Projects</a></li>
-          <li class="nav__link">
-            <a href="#about" class="nav__link--anchor link__hover-effect link__hover-effect--black" onclick="openAbout(event)">About</a>
+          <span>Neo Zhiyong</span>
+        </a>
+
+        <ul class="nav__links">
+          <li><a href="#projects" class="nav__link">Projects</a></li>
+          <li><a href="#about" class="nav__link" onclick="openAbout(event)">About</a></li>
+          <li>
+            <button class="icon-btn" aria-label="Toggle dark mode" onclick="toggleContrast()">
+              <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+            </button>
           </li>
-          <li class="nav__link"><a href="#" class="nav__link--anchor" onclick="toggleContrast()"><i class="fa-solid fa-circle-half-stroke"></i></a></li>
         </ul>
       </nav>
 
       <header class="header">
-        <div class="header__content">
+        <div class="header__content container">
           <h1 class="title">Hi, I'm <span class="blue">Neo</span>.</h1>
-          <p class="header__para">
-            I’m a <b class="blue">software developer</b> passionate about building clean, functional, and engaging web applications.
+          <p class="lead">
+            I’m a <b class="blue">software developer</b> who builds clean, fast, and accessible web apps.
           </p>
-          <div class="social__list">
-            <a href="https://github.com/gnoyihzoen" target="_blank" class="social__link"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/neo-zhiyong" target="_blank" class="social__link"><i class="fa-brands fa-linkedin"></i></a>
+          <div class="social">
+            <a href="https://github.com/gnoyihzoen" target="_blank" rel="noopener" class="social__link" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/neo-zhiyong" target="_blank" rel="noopener" class="social__link" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="mailto:[email protected]" class="social__link" aria-label="Email Neo">
+              <i class="fa-solid fa-paper-plane"></i>
+            </a>
           </div>
+          <a class="scroll" href="#projects" aria-label="Scroll to projects">
+            <span class="scroll__dot"></span>
+          </a>
         </div>
       </header>
     </section>
 
-    <!-- About Modal -->
-    <div class="modal">
-      <div class="modal__content">
-        <i class="fa-solid fa-xmark modal__exit" onclick="toggleModal()"></i>
-        <h3>About Me</h3>
-        <p>
-          I’m <b class="blue">Neo Zhiyong</b>, a developer who enjoys working with modern frameworks like <b>React</b> and <b>Node.js</b>, while also exploring Python and backend systems.
-        </p>
-        <div class="skills">
-          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Python</span><span>Node.js</span>
-        </div>
-      </div>
-    </div>
-
     <!-- Projects -->
-    <section id="projects">
+    <section id="projects" class="section">
       <div class="container">
-        <h1 class="section__title">My <span class="blue">Projects</span></h1>
-        <ul class="project__list">
+        <h2 class="section__title">My <span class="blue">Projects</span></h2>
+        <ul class="project__grid">
 
-          <!-- Example Project -->
+          <!-- Project Card Template (duplicate & edit as needed) -->
           <li class="project">
-            <div class="project__wrapper">
-              <img src="./assets/project1.png" class="project__img" alt="Project Screenshot" />
-              <div class="project__description">
-                <h3 class="project__description--title">Project One</h3>
-                <h4 class="project__description--sub-title">React, Node.js</h4>
-                <p>A short description of your project. What does it do? What tech did you use?</p>
-                <div class="project__description--links">
-                  <a href="https://github.com/gnoyihzoen/project-one" target="_blank"><i class="fa-brands fa-github"></i></a>
-                  <a href="https://gnoyihzoen.github.io/project-one" target="_blank"><i class="fa-solid fa-link"></i></a>
-                </div>
+            <div class="project__media">
+              <img src="./assets/project1.png" alt="Project One screenshot" />
+            </div>
+            <div class="project__body">
+              <h3 class="project__title">Project One</h3>
+              <p class="project__stack">React, Node.js</p>
+              <p class="project__desc">A short description of your project. What problem does it solve? What’s notable?</p>
+              <div class="project__links">
+                <a href="https://github.com/gnoyihzoen/project-one" target="_blank" rel="noopener" class="btn">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+                <a href="https://gnoyihzoen.github.io/project-one" target="_blank" rel="noopener" class="btn btn--ghost">
+                  <i class="fa-solid fa-link"></i> Live
+                </a>
               </div>
             </div>
           </li>
 
-          <!-- Add more projects below -->
+          <!-- Add more <li class="project">...</li> items here -->
         </ul>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-      <div class="container">
-        <a href="#landing-page" class="footer__logo">Neo Zhiyong</a>
-        <div class="footer__social--list">
-          <a href="https://github.com/gnoyihzoen" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/neo-zhiyong" target="_blank">LinkedIn</a>
+    <footer class="footer">
+      <div class="container footer__inner">
+        <a href="#landing-page" class="footer__brand">Neo Zhiyong</a>
+        <div class="footer__links">
+          <a href="https://github.com/gnoyihzoen" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/neo-zhiyong" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:[email protected]">Email</a>
         </div>
-        <div class="footer__copyright">© 2025 Neo Zhiyong</div>
+        <div class="footer__copy">© <span id="year"></span> Neo Zhiyong</div>
       </div>
     </footer>
 
@@ -103,28 +103,26 @@
         <button class="modal__close" aria-label="Close" onclick="closeModal()">
           <i class="fa-solid fa-xmark"></i>
         </button>
-    
+
         <h3 id="about-title" class="modal__heading">About Neo Zhiyong</h3>
         <p class="modal__text">
-          I’m <b class="blue">Neo Zhiyong</b>, a developer who loves building clean, fast web apps.
-          Recently: React + Node projects, and some Python utilities. I enjoy UI polish, accessibility,
-          and thoughtful DX.
+          I’m <b class="blue">Neo</b>, a developer who loves turning ideas into polished, fast, and accessible web apps.
+          Lately I’ve been building with <b>React</b>, <b>Node.js</b>, and <b>Python</b>, focusing on great UX and clean,
+          maintainable code.
         </p>
-    
+
         <div class="modal__skills">
           <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Node.js</span><span>Python</span>
         </div>
-    
+
         <div class="modal__cta">
           <a class="btn btn--primary" href="mailto:[email protected]">
             <i class="fa-solid fa-paper-plane"></i> Email me
           </a>
-          <!-- Optional: link to LinkedIn/GitHub -->
           <a class="btn" href="https://www.linkedin.com/in/neo-zhiyong" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn" href="https://github.com/gnoyihzoen" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
     </div>
-
   </body>
 </html>
