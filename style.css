@@ -59,10 +59,17 @@ body {
 .section__title { text-align: center; margin: 0 0 2rem; font-size: clamp(1.6rem, 3.2vw, 2.2rem); }
 
 /* Projects */
+/* Single-column layout */
 .project__grid {
-  list-style: none; margin: 0; padding: 0;
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
+
 .project {
   background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
   display: grid; grid-template-rows: auto 1fr;
