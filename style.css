@@ -82,7 +82,12 @@ body {
 .social a { font-size: 1.2rem; color: var(--brand); }
 .social a:hover { opacity: .9; }
 
-.scroll { margin-top: 1rem; display: inline-block; }
+.scroll {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
 .scroll__dot {
   width: 10px; height: 10px; background: var(--brand); border-radius: 50%;
   position: relative; display: inline-block;
