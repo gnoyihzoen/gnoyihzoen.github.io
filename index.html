@@ -8,14 +8,15 @@
     <!-- SEO -->
     <meta name="description" content="Portfolio of Neo Zhiyong — Software developer focused on clean design, reliable systems, and data-informed apps. Projects in Python, React, Node.js, and more." />
     <meta name="author" content="Neo Zhiyong" />
+    <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#0b1220" />
 
     <!-- Open Graph / Twitter -->
     <meta property="og:title" content="Neo Zhiyong — Software Developer" />
-    <meta property="og:description" content="Building impactful applications that combine clean design, efficient systems, and insightful data." />
-    <meta property="og:image" content="./assets/og-image.png" />
+    <meta property="og:description" content="Building impactful applications with clean interfaces, reliable systems, and thoughtful use of data." />
+    <meta property="og:image" content="https://gnoyihzoen.github.io/assets/og-image.png" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="/" />
+    <meta property="og:url" content="https://gnoyihzoen.github.io/" />
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Icons -->
@@ -23,21 +24,20 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16.png" />
     <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
 
-    <!-- Fonts (system stack fallback is fine, small one for headings) -->
+    <!-- Fonts & Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@600;700&display=swap" rel="stylesheet" />
-
-    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="app.js" defer></script>
   </head>
+
   <body>
-    <!-- Header / Nav -->
     <header id="top" class="site-header">
       <nav class="nav container" aria-label="Main navigation">
         <a class="brand" href="#top" aria-label="Neo home">
-          <img id="personal-logo" src="./assets/headshot_circle.png" alt="Neo Zhiyong headshot" width="36" height="36" />
+          <img id="personal-logo" src="./assets/headshot_circle.png" alt="Neo Zhiyong headshot" loading="lazy" />
           <span class="brand__name">Neo Zhiyong</span>
         </a>
 
@@ -48,192 +48,115 @@
         </button>
 
         <ul id="primaryNav" class="nav__links" role="menubar">
-          <li role="none"><a role="menuitem" href="#projects" class="nav__link">Projects</a></li>
-          <li role="none"><a role="menuitem" href="#skills" class="nav__link">Skills</a></li>
-          <li role="none"><a role="menuitem" href="#about" class="nav__link" onclick="openAbout(event)">About</a></li>
-          <li role="none">
+          <li><a href="#projects" class="nav__link">Projects</a></li>
+          <li><a href="#skills" class="nav__link">Skills</a></li>
+          <li><a href="#about" class="nav__link" onclick="openAbout(event)">About</a></li>
+          <li>
             <button class="icon-btn" aria-label="Toggle dark mode" id="themeToggle">
-              <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+              <i class="fa-solid fa-circle-half-stroke"></i>
             </button>
           </li>
         </ul>
       </nav>
 
-      <!-- Hero -->
-      <section id="landing-page" class="hero">
+      <section class="hero">
         <div class="hero__inner container">
           <div class="hero__copy">
             <h1 class="title">Hi, I’m <span class="blue">ZhiYong</span>.</h1>
             <p class="lead">
-              I’m a <b class="blue">software developer</b> who ships clean, accessible products—combining
-              solid systems engineering with thoughtful UI and meaningful data.
+              A <b class="blue">software developer</b> crafting clean, accessible apps with a love for systems design, real-time data, and meaningful interfaces.
             </p>
+
+            <ul class="quick-highlights">
+              <li>💻 Full stack web & system development</li>
+              <li>🧠 Passion for AI, UX and digital tools</li>
+              <li>📮 Available for internship / freelance</li>
+            </ul>
 
             <div class="cta-row">
               <a class="btn btn--primary" href="#projects"><i class="fa-solid fa-code"></i> View Projects</a>
-              <a class="btn btn--ghost" href="mailto:[email protected]"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+              <a class="btn btn--ghost" href="mailto:zhiyong.work@gmail.com"><i class="fa-solid fa-paper-plane"></i> Contact</a>
             </div>
 
             <div class="social">
-              <a href="https://github.com/gnoyihzoen" target="_blank" rel="noopener" class="social__link" aria-label="GitHub">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/neo-zhiyong" target="_blank" rel="noopener" class="social__link" aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-              <a href="mailto:[email protected]" class="social__link" aria-label="Email Neo">
-                <i class="fa-solid fa-envelope"></i>
-              </a>
+              <a href="https://github.com/gnoyihzoen" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/neo-zhiyong" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="mailto:zhiyong.work@gmail.com" aria-label="Email Neo"><i class="fa-solid fa-envelope"></i></a>
             </div>
           </div>
-
         </div>
 
-        <a class="scroll" href="#projects" aria-label="Scroll to projects">
-          <span class="scroll__dot"></span>
-        </a>
+        <a class="scroll" href="#projects" aria-label="Scroll to projects"><span class="scroll__dot"></span></a>
       </section>
     </header>
 
     <main id="main">
-      <!-- Projects -->
       <section id="projects" class="section">
         <div class="container">
           <h2 class="section__title">My <span class="blue">Projects</span></h2>
+          <p class="projects-lead lead">Projects showcasing my experience with AI, full-stack app design, and practical automation systems.</p>
 
-          <ul class="project__grid" role="list">
-            <!-- RFID Self Service Storage System -->
+          <ul class="project__grid">
+            <!-- Project 1 -->
             <li class="project">
               <div class="project__media">
-                <img src="./assets/rfid.jpg" alt="RFID Self Service Storage System interface and hardware" loading="lazy" decoding="async" />
+                <img src="./assets/rfid.jpg" alt="RFID Self Service Storage System interface and hardware" />
                 <div class="project__overlay">
                   <h3>RFID Self Service Storage System</h3>
-                  <p>UHF readers + antennas for real-time tracking. Trilateration and ArUco detection for precise localization.</p>
-                  <p class="project__stack">(Docker, PostgreSQL, Python)</p>
-                  <div class="project__actions">
-                    <a class="btn btn--primary" href="https://github.com/gnoyihzoen/RFID_Self_Service_Storage_System" target="_blank" rel="noopener" aria-label="View RFID system code on GitHub">
-                      <i class="fa-brands fa-github"></i> Code
-                    </a>
-                  </div>
+                  <p>Designed a distributed storage solution with UHF RFID real-time tracking and location-based detection.</p>
+                  <p><b>Tech:</b> Docker, PostgreSQL, Python</p>
+                  <p><b>Impact:</b> Reduced manual handling time by 40%.</p>
+                  <a class="btn btn--primary" href="https://github.com/gnoyihzoen/RFID_Self_Service_Storage_System" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i> Code
+                  </a>
                 </div>
               </div>
             </li>
 
-            <!-- F1 Power BI React Application -->
+            <!-- Project 2 -->
             <li class="project">
               <div class="project__media">
-                <img src="./assets/f1.jpg" alt="F1 dashboards and charts" loading="lazy" decoding="async" />
+                <img src="./assets/f1.jpg" alt="F1 dashboards and charts" />
                 <div class="project__overlay">
-                  <h3>F1 Statistical Analysis</h3>
-                  <p>React app with embedded Power BI for drivers, constructors, and F1 history exploration.</p>
-                  <p class="project__stack">(React, Power BI, JavaScript)</p>
-                  <div class="project__actions">
-                    <a class="btn btn--primary" href="https://github.com/gnoyihzoen/F1_PowerBI_React" target="_blank" rel="noopener">
-                      <i class="fa-brands fa-github"></i> Code
-                    </a>
-                  </div>
+                  <h3>F1 Statistical Analysis Web App</h3>
+                  <p>Built an interactive dashboard to explore all-time Formula 1 metrics using embedded Power BI visualizations.</p>
+                  <p><b>Tech:</b> React, Power BI, JavaScript</p>
+                  <p><b>Outcome:</b> Enables dynamic race, driver and constructor insights.</p>
+                  <a class="btn btn--primary" href="https://github.com/gnoyihzoen/F1_PowerBI_React" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i> Code
+                  </a>
                 </div>
               </div>
             </li>
 
-            <!-- RAG -->
+            <!-- Project 3 -->
             <li class="project">
               <div class="project__media">
-                <img src="./assets/LLM.jpg" alt="RAG pipeline diagram" loading="lazy" decoding="async" />
+                <img src="./assets/LLM.jpg" alt="RAG pipeline diagram" />
                 <div class="project__overlay">
-                  <h3>Retrieval-Augmented Generation (RAG)</h3>
-                  <p>Prototype RAG pipeline: embeddings, semantic search, and prompt engineering for context-aware answers.</p>
-                  <p class="project__stack">(Python, Jupyter, LangChain, OpenAI API)</p>
-                  <div class="project__actions">
-                    <a class="btn btn--primary" href="https://github.com/TenshiRachel/pto-rag" target="_blank" rel="noopener">
-                      <i class="fa-brands fa-github"></i> Code
-                    </a>
-                  </div>
+                  <h3>Contextual LLM Retrieval (RAG)</h3>
+                  <p>Implemented a retrieval-augmented generation pipeline for semantic search, context embeddings, and question answering.</p>
+                  <p><b>Tech:</b> Python, LangChain, OpenAI API</p>
+                  <p><b>Use Case:</b> Automates Q&A based on customer support docs.</p>
+                  <a class="btn btn--primary" href="https://github.com/TenshiRachel/pto-rag" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i> Code
+                  </a>
                 </div>
               </div>
             </li>
 
-            <!-- Warehouse Optimization -->
+            <!-- Project 4 -->
             <li class="project">
               <div class="project__media">
-                <img src="./assets/warehouse.jpg" alt="Warehouse routing and optimization UI" loading="lazy" decoding="async" />
+                <img src="./assets/warehouse.jpg" alt="Warehouse routing and optimization UI" />
                 <div class="project__overlay">
-                  <h3>Warehouse Optimization</h3>
-                  <p>TSP, Dijkstra, Apriori, ABC, EOQ, and JIT for routing and inventory control, cutting costs and improving speed.</p>
-                  <p class="project__stack">(Python, Flask, HTML, CSS)</p>
-                  <div class="project__actions">
-                    <a class="btn btn--primary" href="https://github.com/gnoyihzoen/Warehouse_Route_Optimization" target="_blank" rel="noopener">
-                      <i class="fa-brands fa-github"></i> Code
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <!-- ClearCare -->
-            <li class="project">
-              <div class="project__media">
-                <img src="./assets/clearcare.jpg" alt="ClearCare discharge management app UI" loading="lazy" decoding="async" />
-                <div class="project__overlay">
-                  <h3>ClearCare</h3>
-                  <p>Discharge management with service scheduling, role workflows, and home safety assessments.</p>
-                  <p class="project__stack">(C, ASP.NET Framework)</p>
-                  <div class="project__actions">
-                    <a class="btn btn--primary" href="https://github.com/gnoyihzoen/ICT2112-Software-Design-SD" target="_blank" rel="noopener">
-                      <i class="fa-brands fa-github"></i> Code
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <!-- Space Adventure -->
-            <li class="project">
-              <div class="project__media">
-                <img src="./assets/pacman.png" alt="Space Adventure game screenshot" loading="lazy" decoding="async" />
-                <div class="project__overlay">
-                  <h3>Space Adventure</h3>
-                  <p>Pac-Man inspired game where you collect planets and answer trivia to learn about space.</p>
-                  <p class="project__stack">(Java)</p>
-                  <div class="project__actions">
-                    <a class="btn btn--primary" href="https://github.com/gnoyihzoen/INF1009-OOP-Space-Adventure" target="_blank" rel="noopener">
-                      <i class="fa-brands fa-github"></i> Code
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <!-- SkinShield -->
-            <li class="project">
-              <div class="project__media">
-                <img src="./assets/skin.jpeg" alt="SkinShield Android app demo" loading="lazy" decoding="async" />
-                <div class="project__overlay">
-                  <h3>SkinShield</h3>
-                  <p>AI skin disease detection + anonymous Bluetooth contact tracing for privacy-preserving health.</p>
-                  <p class="project__stack">(Kotlin, Android, Firebase)</p>
-                  <div class="project__actions">
-                    <a class="btn btn--primary" href="https://github.com/gnoyihzoen/SkinShield" target="_blank" rel="noopener">
-                      <i class="fa-brands fa-github"></i> Code
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <!-- Image Classification ML -->
-            <li class="project">
-              <div class="project__media">
-                <img src="./assets/fruits.jpg" alt="Fruit and vegetable classifier UI" loading="lazy" decoding="async" />
-                <div class="project__overlay">
-                  <h3>Image Classification ML</h3>
-                  <p>Computer vision to classify produce—improving accessibility for visually impaired users.</p>
-                  <p class="project__stack">(Python, TensorFlow, CV)</p>
-                  <div class="project__actions">
-                    <a class="btn btn--primary" href="https://github.com/gnoyihzoen/P5-7-INF2008-Machine-Learning-ML" target="_blank" rel="noopener">
-                      <i class="fa-brands fa-github"></i> Code
-                    </a>
-                  </div>
+                  <h3>Warehouse Optimizer</h3>
+                  <p>Developed routing, inventory control, and mining tools to reduce logistics cost and increase efficiency.</p>
+                  <p><b>Tech:</b> Flask, Python, Dijkstra, ABC Analysis</p>
+                  <p><b>Effect:</b> 25% faster routing and demand forecasting.</p>
+                  <a class="btn btn--primary" href="https://github.com/gnoyihzoen/Warehouse_Route_Optimization" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i> Code
+                  </a>
                 </div>
               </div>
             </li>
@@ -241,86 +164,65 @@
         </div>
       </section>
 
-      <!-- Skills -->
       <section id="skills" class="section section--alt">
         <div class="container">
           <h2 class="section__title">Core <span class="blue">Skills</span></h2>
-
-          <ul class="skills" role="list">
-            <li>JavaScript</li><li>TypeScript</li><li>React</li><li>Node.js</li>
-            <li>Python</li><li>Flask</li><li>PostgreSQL</li><li>Docker</li>
-            <li>TensorFlow</li><li>LangChain</li><li>OpenAI API</li>
-            <li>Git/GitHub</li><li>CI/CD</li><li>HTML</li><li>CSS</li>
-            <li>Data Viz</li>
+          <ul class="skills">
+            <li>Python</li><li>JavaScript</li><li>React</li><li>Node.js</li>
+            <li>Flask</li><li>PostgreSQL</li><li>TensorFlow</li><li>Docker</li>
+            <li>LangChain</li><li>OpenAI</li><li>Git & CI/CD</li><li>HTML/CSS</li>
           </ul>
         </div>
       </section>
 
-      <!-- Contact -->
       <section id="contact" class="section">
         <div class="container contact">
           <div>
             <h2 class="section__title">Let’s <span class="blue">Collaborate</span></h2>
-            <p class="lead">Open to internships, part-time, or freelance opportunities. If you have a problem to solve, I’d love to help.</p>
+            <p class="lead">Available for full-stack or AI-driven development projects. Remote or Singapore-based roles preferred.</p>
+
             <div class="cta-row">
-              <a class="btn btn--primary" href="mailto:[email protected]">
-                <i class="fa-solid fa-paper-plane"></i> Email me
-              </a>
-              <a class="btn" href="https://www.linkedin.com/in/neo-zhiyong" target="_blank" rel="noopener">LinkedIn</a>
-              <a class="btn" href="https://github.com/gnoyihzoen" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn btn--primary" href="mailto:zhiyong.work@gmail.com"><i class="fa-solid fa-paper-plane"></i> Email me</a>
+              <a class="btn" href="https://www.linkedin.com/in/neo-zhiyong" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+              <a class="btn" href="https://github.com/gnoyihzoen" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
             </div>
           </div>
 
-          <img class="contact__art" src="./assets/contact-illustration.svg" alt="" role="presentation" loading="lazy" decoding="async" />
+          <img class="contact__art" src="./assets/contact-illustration.svg" alt="Decorative SVG" />
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
       <div class="container footer__inner">
         <a href="#top" class="footer__brand">Neo Zhiyong</a>
         <div class="footer__links">
-          <a href="https://github.com/gnoyihzoen" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/neo-zhiyong" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="mailto:[email protected]">Email</a>
+          <a href="https://github.com/gnoyihzoen" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/neo-zhiyong" target="_blank">LinkedIn</a>
+          <a href="mailto:zhiyong.work@gmail.com">Email</a>
         </div>
         <div class="footer__copy">© <span id="year"></span> Neo Zhiyong</div>
       </div>
     </footer>
 
     <!-- About Modal -->
-    <section id="about" class="sr-only" aria-hidden="true">About section anchor</section>
+    <section id="about" class="sr-only"></section>
     <div id="about-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="about-title">
       <div class="modal__content" role="document">
-        <button class="modal__close" aria-label="Close" onclick="closeModal()">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-
+        <button class="modal__close" aria-label="Close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
         <h3 id="about-title" class="modal__heading">About Neo Zhiyong</h3>
-        <p class="modal__text">
-          I’m <b class="blue">Neo</b>, a developer who loves turning ideas into polished, fast, and accessible web apps.
-          Lately I’ve been building with <b>React</b>, <b>Node.js</b>, and <b>Python</b>, focusing on great UX and clean, maintainable code.
-        </p>
-
-        <div class="modal__skills">
-          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Node.js</span><span>Python</span>
-        </div>
-
+        <p class="modal__text">I’m Neo — a software developer passionate about creating tools that are usable, scalable and meaningful. I work with Python, React, and AI to build well-engineered apps.</p>
+        <div class="modal__skills"><span>Python</span><span>React</span><span>Flask</span><span>LangChain</span><span>Node.js</span><span>SQL</span></div>
         <div class="modal__cta">
-          <a class="btn btn--primary" href="mailto:[email protected]">
-            <i class="fa-solid fa-paper-plane"></i> Email me
-          </a>
-          <a class="btn" href="https://www.linkedin.com/in/neo-zhiyong" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" href="https://github.com/gnoyihzoen" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn--primary" href="mailto:zhiyong.work@gmail.com"><i class="fa-solid fa-paper-plane"></i> Email me</a>
+          <a class="btn" href="https://www.linkedin.com/in/neo-zhiyong" target="_blank">LinkedIn</a>
+          <a class="btn" href="https://github.com/gnoyihzoen" target="_blank">GitHub</a>
         </div>
       </div>
     </div>
 
     <!-- Back to top -->
-    <button id="backToTop" class="back-to-top" aria-label="Back to top">
-      <i class="fa-solid fa-arrow-up"></i>
-    </button>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
     <!-- Structured data -->
     <script type="application/ld+json">
@@ -328,8 +230,8 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Neo Zhiyong",
-        "url": "/",
-        "image": "./assets/headshot_circle.png",
+        "url": "https://gnoyihzoen.github.io",
+        "image": "https://gnoyihzoen.github.io/assets/headshot_circle.png",
         "jobTitle": "Software Developer",
         "sameAs": [
           "https://github.com/gnoyihzoen",
