@@ -28,6 +28,28 @@
   --shadow: 0 10px 30px rgba(0,0,0,.08);
 }
 
+/* -------- Light mode nav fix -------- */
+:root.light .nav {
+  background: #ffffff;
+  color: #20262f;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+:root.light .nav__link:hover {
+  background: rgba(0, 122, 204, 0.1);
+}
+
+:root.light .brand__name {
+  color: #20262f;
+}
+
+:root.light .icon-btn {
+  background: #f1f5fb;
+  border-color: #d5dbe3;
+  color: #20262f;
+}
+
+
 /* Base Styles */
 * { box-sizing: border-box; }
 html, body { height: 100%; margin: 0; padding: 0; }
