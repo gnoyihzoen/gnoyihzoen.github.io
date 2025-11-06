@@ -97,13 +97,13 @@
           <p class="projects-lead lead">Projects showcasing my experience with AI, full-stack app design, and practical automation systems.</p>
 
           <ul class="project__grid">
-            <!-- Project 1 -->
+            <!-- 1. RFID -->
             <li class="project">
               <div class="project__media">
                 <img src="./assets/rfid.jpg" alt="RFID Self Service Storage System interface and hardware" />
                 <div class="project__overlay">
                   <h3>RFID Self Service Storage System</h3>
-                  <p>Designed a distributed storage solution with UHF RFID real-time tracking and location-based detection.</p>
+                  <p>Distributed storage with UHF RFID real-time tracking and localization (trilateration + ArUco).</p>
                   <p><b>Tech:</b> Docker, PostgreSQL, Python</p>
                   <p><b>Impact:</b> Reduced manual handling time by 40%.</p>
                   <a class="btn btn--primary" href="https://github.com/gnoyihzoen/RFID_Self_Service_Storage_System" target="_blank" rel="noopener">
@@ -113,15 +113,15 @@
               </div>
             </li>
 
-            <!-- Project 2 -->
+            <!-- 2. F1 -->
             <li class="project">
               <div class="project__media">
                 <img src="./assets/f1.jpg" alt="F1 dashboards and charts" />
                 <div class="project__overlay">
                   <h3>F1 Statistical Analysis Web App</h3>
-                  <p>Built an interactive dashboard to explore all-time Formula 1 metrics using embedded Power BI visualizations.</p>
+                  <p>Interactive dashboard exploring all-time Formula 1 metrics with embedded Power BI visualizations.</p>
                   <p><b>Tech:</b> React, Power BI, JavaScript</p>
-                  <p><b>Outcome:</b> Enables dynamic race, driver and constructor insights.</p>
+                  <p><b>Outcome:</b> Enables dynamic race, driver, and constructor insights.</p>
                   <a class="btn btn--primary" href="https://github.com/gnoyihzoen/F1_PowerBI_React" target="_blank" rel="noopener">
                     <i class="fa-brands fa-github"></i> Code
                   </a>
@@ -129,13 +129,13 @@
               </div>
             </li>
 
-            <!-- Project 3 -->
-            <li class="project">
+            <!-- 3. RAG (WIDE) -->
+            <li class="project project--wide">
               <div class="project__media">
                 <img src="./assets/LLM.jpg" alt="RAG pipeline diagram" />
                 <div class="project__overlay">
                   <h3>Contextual LLM Retrieval (RAG)</h3>
-                  <p>Implemented a retrieval-augmented generation pipeline for semantic search, context embeddings, and question answering.</p>
+                  <p>Retrieval-augmented generation pipeline: embeddings, semantic search, and prompt engineering for context-aware answers.</p>
                   <p><b>Tech:</b> Python, LangChain, OpenAI API</p>
                   <p><b>Use Case:</b> Automates Q&A based on customer support docs.</p>
                   <a class="btn btn--primary" href="https://github.com/TenshiRachel/pto-rag" target="_blank" rel="noopener">
@@ -145,16 +145,80 @@
               </div>
             </li>
 
-            <!-- Project 4 -->
-            <li class="project">
+            <!-- 4. Warehouse (WIDE) -->
+            <li class="project project--wide">
               <div class="project__media">
                 <img src="./assets/warehouse.jpg" alt="Warehouse routing and optimization UI" />
                 <div class="project__overlay">
                   <h3>Warehouse Optimizer</h3>
-                  <p>Developed routing, inventory control, and mining tools to reduce logistics cost and increase efficiency.</p>
-                  <p><b>Tech:</b> Flask, Python, Dijkstra, ABC Analysis</p>
+                  <p>Routing + inventory control: TSP, Dijkstra, Apriori, ABC, EOQ, JIT to improve efficiency and reduce cost.</p>
+                  <p><b>Tech:</b> Flask, Python, HTML, CSS</p>
                   <p><b>Effect:</b> 25% faster routing and demand forecasting.</p>
                   <a class="btn btn--primary" href="https://github.com/gnoyihzoen/Warehouse_Route_Optimization" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i> Code
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <!-- 5. ClearCare -->
+            <li class="project">
+              <div class="project__media">
+                <img src="./assets/clearcare.jpg" alt="ClearCare discharge management app UI" />
+                <div class="project__overlay">
+                  <h3>ClearCare</h3>
+                  <p>Discharge management with scheduling, role workflows, and home safety assessments.</p>
+                  <p><b>Tech:</b> C, ASP.NET Framework</p>
+                  <p><b>Outcome:</b> Streamlined discharge process and team coordination.</p>
+                  <a class="btn btn--primary" href="https://github.com/gnoyihzoen/ICT2112-Software-Design-SD" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i> Code
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <!-- 6. Space Adventure -->
+            <li class="project">
+              <div class="project__media">
+                <img src="./assets/pacman.png" alt="Space Adventure game screenshot" />
+                <div class="project__overlay">
+                  <h3>Space Adventure</h3>
+                  <p>Pac-Man inspired Java game where you collect planets and answer trivia to learn about space.</p>
+                  <p><b>Tech:</b> Java</p>
+                  <p><b>Impact:</b> Educational gameplay with progressive difficulty.</p>
+                  <a class="btn btn--primary" href="https://github.com/gnoyihzoen/INF1009-OOP-Space-Adventure" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i> Code
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <!-- 7. SkinShield -->
+            <li class="project">
+              <div class="project__media">
+                <img src="./assets/skin.jpeg" alt="SkinShield Android app demo" />
+                <div class="project__overlay">
+                  <h3>SkinShield</h3>
+                  <p>AI skin disease detection + anonymous Bluetooth contact tracing for privacy-preserving health.</p>
+                  <p><b>Tech:</b> Kotlin, Android, Firebase</p>
+                  <p><b>Outcome:</b> Early risk detection with private on-device checks.</p>
+                  <a class="btn btn--primary" href="https://github.com/gnoyihzoen/SkinShield" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i> Code
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <!-- 8. Image Classification ML -->
+            <li class="project">
+              <div class="project__media">
+                <img src="./assets/fruits.jpg" alt="Fruit and vegetable classifier UI" />
+                <div class="project__overlay">
+                  <h3>Image Classification ML</h3>
+                  <p>Computer vision model to classify produce — improves accessibility for visually impaired users.</p>
+                  <p><b>Tech:</b> Python, TensorFlow, CV</p>
+                  <p><b>Impact:</b> Accurate, fast inference on edge devices.</p>
+                  <a class="btn btn--primary" href="https://github.com/gnoyihzoen/P5-7-INF2008-Machine-Learning-ML" target="_blank" rel="noopener">
                     <i class="fa-brands fa-github"></i> Code
                   </a>
                 </div>
